@@ -87,6 +87,7 @@ func (m *Hessian2Codec) Encode(ctx context.Context, message remote.Message, out 
 }
 
 func (m *Hessian2Codec) encodeRequestPayload(ctx context.Context, message remote.Message) (buf []byte, err error) {
+	//todo fastCode实现
 	encoder := hessian.NewEncoder()
 
 	service := &dubbo.Service{
